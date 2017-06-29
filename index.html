@@ -15,7 +15,17 @@ Author: arjunatlast
     <meta name="author" content="Arjun P">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="./">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#1e1e1e">
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- Site Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/template.css" />
   </head>
   <body>
     <!--Preloader-->
@@ -28,6 +38,7 @@ Author: arjunatlast
         width: 100vw;
         height: 100vh;
         position: fixed;
+        background: white;
         top: 0;
         left: 0;
         display: flex;
@@ -56,7 +67,15 @@ Author: arjunatlast
 
     <!-- header -->
     <header>
-      
+      <img
+        class='img-header hide-down-sm wow zoomIn'
+        src='./images/header/phox_logo_header_type 2 grad.svg'
+        data-wow-duration='1s'/>
+
+        <button
+          class="btn-round btn-explore wow fadeInUp"
+          data-wow-delay='1s'
+          data-wow-duration='1s'>Explore</button>
     </header>
 
     <!-- main -->
@@ -71,6 +90,12 @@ Author: arjunatlast
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+    //<![CDATA[
+      new WOW().init();
+    //]]
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

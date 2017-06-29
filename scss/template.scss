@@ -1,0 +1,60 @@
+//Variables {
+  $primaryColor: #8BC34A;
+  $textColor: #1e1e1e;
+//}
+//datas {
+
+//}
+
+//mixins{
+  //@param: CSSValue
+  @mixin flex($direction) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+  }
+//}
+
+/*Buttons{*/
+  .btn-round {
+    border-radius: 50rem;
+  }
+/*}*/
+
+
+header {
+  background: $textColor;
+  @include flex(column);
+
+  .img-header {
+    margin: auto;
+  }
+
+  .btn-explore {
+    @include flex(row);
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    left: calc( 50% - 125px);
+    bottom: 20%;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 16ems;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:hover {
+      background: $primaryColor;
+      border-color: $primaryColor;
+      color: $textColor;
+    }
+  }
+
+}
