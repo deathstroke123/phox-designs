@@ -18,10 +18,45 @@ Author: arjunatlast
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div w3-include-html="includes/preloader.html"></div>
+    <!--Preloader-->
+    <div class='preloader'>
+      <div class="loader"></div>
+    </div>
+    <style type='text/css'>
+    /*<![CDATA[*/
+      div.preloader {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out 0s;
+      }
+      div.preloader .loader {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border-top: 3px solid #8BC34A;
+        border-left: 3px solid #8BC34A;
+        border-right: 3px solid #8BC34A;
+        border-bottom: 3px solid transparent;
+        margin: auto;
+        animation: loading 1s linear infinite;
+      }
+
+      @keyframes loading {
+        from { transform: rotate(0deg)}
+        to { transform: rotate(360deg)}
+      }
+    /*]]>*/
+    </style>
+    <!--/Preloader-->
+
     <!-- header -->
     <header>
-
+      
     </header>
 
     <!-- main -->
@@ -36,12 +71,6 @@ Author: arjunatlast
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script>
-    //<![CDATA[
-        w3.includeHTML();
-    //]]>
-    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

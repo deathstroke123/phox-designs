@@ -6,3 +6,6 @@
 *****************************/
 
 //onwindow load
+$(window).on('load', function(){
+    $(".preloader").remove();
+});
