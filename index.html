@@ -22,6 +22,8 @@ Author: arjunatlast
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#1e1e1e">
     <!--Animate CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css" />
     <!-- Site Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -44,6 +46,7 @@ Author: arjunatlast
         display: flex;
         opacity: 1;
         transition: opacity 0.5s ease-in-out 0s;
+        z-index: 500;
       }
       div.preloader .loader {
         width: 30px;
@@ -68,18 +71,54 @@ Author: arjunatlast
     <!-- header -->
     <header>
       <img
-        class='img-header hide-down-sm wow zoomIn'
+        class='img-header wow zoomIn'
         src='./images/header/phox_logo_header_type 2 grad.svg'
         data-wow-duration='1s'/>
 
         <button
-          class="btn-round btn-explore wow fadeInUp"
+          class="btn-frame btn-hover-title wow fadeInUp"
+          id="btn-explore"
+          data-hover-title="Explore"
           data-wow-delay='1s'
-          data-wow-duration='1s'>Explore</button>
+          data-wow-duration='1s'>
+          <i class="material-icons">apps</i>
+        </button>
+
+        <!-- Background -->
+        <div class="bg-holder"></div>
+
+        <nav class="nav-circles">
+          <li>
+            <a
+              href='/about.html'
+              class="btn-frame btn-hover-title wow flipInX"
+              data-wow-delay="1.5s"
+              data-hover-title="About"
+              data-wow-duration="0.8s">
+              <i class="material-icons">info</i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href='/contact.html'
+              class="btn-frame btn-hover-title wow flipInX"
+              data-wow-delay="1.8s"
+              data-hover-title="Contact"
+              data-wow-duration="0.8s">
+              <i class="material-icons">phone</i>
+            </a>
+          </li>
+        </nav>
+
+        <div id="hover-text" class='wow bounceIn'>TEXT</div>
     </header>
 
     <!-- main -->
-    <main>
+    <main id="main">
+
+      <section class='cover-view'>
+      </section>
 
     </main>
 
@@ -96,6 +135,7 @@ Author: arjunatlast
       new WOW().init();
     //]]
     </script>
+    <script src="js/functions.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
