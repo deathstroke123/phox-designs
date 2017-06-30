@@ -53,6 +53,7 @@
     text-transform: uppercase;
     font-weight: 500;
     transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background: white;
@@ -81,6 +82,29 @@ header {
     left: calc( 50% - 25px);
     bottom: 15%;
     z-index: 2;
+
+  }
+
+  #btn-menu {
+    position: absolute;
+    left: calc( 50% - 25px);
+    top: 15%;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 768px) {
+    #btn-explore, #btn-menu {
+      &::after {
+        content: attr(data-hover-title);
+        position: absolute;
+        color: white;
+        font-size: 12px;
+        font-weight: 100;
+      }
+    }
+
+    #btn-menu::after { bottom: calc(100% + 8px); }
+    #btn-explore::after { top: calc(100% + 8px); }
   }
 
   .bg-holder {
@@ -104,14 +128,20 @@ header {
       left: 0px;
       background-color: rgba(0,0,0,0.5);
     }
+
+
   }
 
-  .nav-circles {
+  .nav-squares {
     display: flex;
     display: -webkit-flex;
     position: absolute;
     list-style-type: none;
     z-index: 2;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    top: 30%;
+    right: 30px;
 
     li {
       margin: 15px;
@@ -119,8 +149,62 @@ header {
 
   }
 
+  .nav-menu {
+    @include flex(column);
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 30px;
+    background: $textColor;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+
+    &.hidden {
+      top: -105vh;
+    }
+
+    li {
+      margin-left: 30px;
+      padding: 16px;
+      a:link, a:visited{
+        font-weight: 100;
+        font-size: 30px;
+        color: $primaryColor;
+        text-transform: uppercase;
+
+        i.material-icons {
+          padding: 2px;
+          border: 1px solid $primaryColor;
+          margin-right: 8px;
+        }
+      }
+      a:active {
+        color: white;
+      }
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      padding: 8px;
+      border: 1px solid $primaryColor;
+      right: 20px;
+      color: $primaryColor;
+      &:active {
+        color: white;
+        border-color: white;
+      }
+    }
+
+  }
+
   #hover-text {
-    display: none;
+    @include flex(column);
     width: 100%;
     align-items: center;
     -webkit-align-items: center;
@@ -132,8 +216,8 @@ header {
     color: white;
     font-weight: 100;
     text-transform: uppercase;
-    &.visible {
-      @include flex(column);
+    &.hidden {
+      display: none;
     }
   }
 

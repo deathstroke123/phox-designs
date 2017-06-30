@@ -14,7 +14,6 @@ Author: arjunatlast
     <meta name="keywords" content="Web Design, Graphic Design, Logo Design, HTML, CSS, Javascript">
     <meta name="author" content="Arjun P">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="./">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -84,13 +83,23 @@ Author: arjunatlast
           <i class="material-icons">apps</i>
         </button>
 
+        <button
+          class="btn-frame btn-hover-title wow fadeInDown hide-up-sm"
+          id="btn-menu"
+          data-hover-title="Menu"
+          data-wow-delay='1s'
+          data-wow-duration='1s'>
+          <i class="material-icons">menu</i>
+        </button>
+
         <!-- Background -->
         <div class="bg-holder"></div>
 
-        <nav class="nav-circles">
+        <!-- Nav hidden from mobiles -->
+        <nav class="nav-squares hide-down-sm">
           <li>
             <a
-              href='/about.html'
+              href='#about'
               class="btn-frame btn-hover-title wow flipInX"
               data-wow-delay="1.5s"
               data-hover-title="About"
@@ -101,7 +110,7 @@ Author: arjunatlast
 
           <li>
             <a
-              href='/contact.html'
+              href='#contact'
               class="btn-frame btn-hover-title wow flipInX"
               data-wow-delay="1.8s"
               data-hover-title="Contact"
@@ -111,7 +120,18 @@ Author: arjunatlast
           </li>
         </nav>
 
-        <div id="hover-text" class='wow bounceIn'>TEXT</div>
+        <!-- Nav Menu Substituting Nav Squares -->
+        <nav id="navMenu" class="nav-menu hidden hide-up-sm">
+          <span id='btn-menu-close' class='btn-close'><i class="material-icons">close</i></span>
+          <li>
+            <a href="#about"><i class="material-icons">info</i> About</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="material-icons">phone</i> Contact</a>
+          </li>
+        </nav>
+
+        <div id="hover-text" class='wow bounceIn hidden hide-down-sm'>EXPLORE</div>
     </header>
 
     <!-- main -->

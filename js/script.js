@@ -13,4 +13,7 @@ $(window).on('load', function(){
 $(document).ready(function(){
   $("#btn-explore").scrollTo($("#main"), 500);
   $(".btn-hover-title").showHoverTitle($("#hover-text"));
+  //navMenu
+  $("#navMenu").addOpenButton($('#btn-menu'));
+  $("#navMenu").addCloseButton($('#btn-menu-close'));
 });
