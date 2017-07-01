@@ -1,6 +1,7 @@
 //Variables {
   $primaryColor: #8BC34A;
   $textColor: #1e1e1e;
+  $borderColor: #cccccc;
 //}
 //datas {
 
@@ -32,6 +33,7 @@
     background-size: cover;
   }
 //}
+body { color: $textColor; }
 
 /*Buttons{*/
   .btn-round {
@@ -67,6 +69,15 @@
 
 /*}*/
 
+/*Holders*/
+.wrapper {
+  background: white;
+}
+
+.container {
+  padding: 16px;
+}
+/**/
 
 header {
   background: $textColor;
@@ -221,4 +232,30 @@ header {
     }
   }
 
+}
+
+main#main {
+  .wrapper {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 16px;
+    h2 { text-align: center;}
+
+    .row [class^="col-"]{
+      padding: 8px;
+      .item {
+        @include flex(column);
+        align-items: center;
+        padding: 16px;
+        -webkit-align-items: center;
+        i.pi { font-size: 180px;}
+        h3 {
+          margin-top: 8px ;
+          padding: 8px 12px;
+          border: 1px solid $borderColor;
+        }
+      }
+    }
+  }
 }

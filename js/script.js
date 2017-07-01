@@ -11,7 +11,7 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function(){
-  $("#btn-explore").scrollTo($("#main"), 500);
+  $("#btn-explore").scrollTo($("#main"), 1000);
   $(".btn-hover-title").showHoverTitle($("#hover-text"));
   //navMenu
   $("#navMenu").addOpenButton($('#btn-menu'));

@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'phox-icons';
+  src:  url('fonts/phox-icons.eot?bs14gn');
+  src:  url('fonts/phox-icons.eot?bs14gn#iefix') format('embedded-opentype'),
+    url('fonts/phox-icons.ttf?bs14gn') format('truetype'),
+    url('fonts/phox-icons.woff?bs14gn') format('woff'),
+    url('fonts/phox-icons.svg?bs14gn#phox-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pi {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'phox-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pi-node-js:before {
+  content: "\e901";
+}
+.pi-illustrator:before {
+  content: "\e900";
+}
+.pi-photoshop:before {
+  content: "\e902";
+}
+.pi-php:before {
+  content: "\e903";
+}
+.pi-wordpress:before {
+  content: "\eab4";
+}
+.pi-codepen:before {
+  content: "\eae8";
+}
+.pi-codeigniter:before {
+  content: "\e904";
+}
+.pi-jquery:before {
+  content: "\e905";
+}
+.pi-react:before {
+  content: "\e906";
+}
+.pi-web-design:before {
+  content: "\e907";
+}
+.pi-graphic-design:before {
+  content: "\e908";
+}
+.pi-logo-design:before {
+  content: "\e909";
+}
+.pi-phox-logo:before {
+  content: "\e90a";
+}
+.pi-phox-logo-circle:before {
+  content: "\e90b";
+}
+.pi-facebook:before {
+  content: "\ea90";
+}
+.pi-instagram:before {
+  content: "\ea92";
+}
+.pi-whatsapp:before {
+  content: "\ea93";
+}
+.pi-github:before {
+  content: "\eab0";
+}
+.pi-appleinc:before {
+  content: "\eabe";
+}
+.pi-android:before {
+  content: "\eac0";
+}
+.pi-windows:before {
+  content: "\eac2";
+}
+.pi-linkedin:before {
+  content: "\eaca";
+}
+.pi-chrome:before {
+  content: "\ead9";
+}
+.pi-firefox:before {
+  content: "\eada";
+}
+.pi-ie:before {
+  content: "\eadb";
+}
+.pi-safari:before {
+  content: "\eadd";
+}
+.pi-opera:before {
+  content: "\eade";
+}
+.pi-html5:before {
+  content: "\eae5";
+}
+.pi-css3:before {
+  content: "\eae6";
+}

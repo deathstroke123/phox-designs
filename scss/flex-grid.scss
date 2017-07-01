@@ -1,0 +1,36 @@
+/** CSS File
+* Author: arjunatlast
+* Name: flex-grid.css
+**/
+
+$breakpoints : (
+  xs: 320px,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+
+@mixin grid($cols) {
+  @each $type, $width in $breakpoints {
+    @media screen and (min-width:#{$width}) {
+      @for $i from 1 through $cols {
+        .col-#{$type}-#{$i} {
+            width: #{$i/$cols*100%} ;
+        }
+        .offset-#{$type}-#{$i} {
+            margin-left: #{$i/$cols*100%} ;
+        }
+      }
+    }
+  }
+}
+
+.grid-12.row {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  @include grid(12);
+}
